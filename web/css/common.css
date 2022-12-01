@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+#app>.side,
+#app>.content {
+    height: 100vh;
+}
+
+#app>.side {
+    width: 400px;
+    cursor: pointer;
+}
+
+#app>.content {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+#skin-show {
+    width: 400px;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+    flex-direction: column;
+}
+
+.skin-block {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+	position: fixed;
+}
+
+.skin-block.front {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
+    margin-bottom: 200px;
+}
+
+.skin-block.back {
+    transform: rotateX(35deg) rotateY(45deg) rotateZ(0deg);
+    margin-top: 200px;
+}
+
+.skin-block.front.outside {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg) scale3d(1.1, 1.1, 1.1);
+}
+
+.skin-block.back.outside {
+    transform: rotateX(35deg) rotateY(45deg) rotateZ(0deg) scale3d(1.1, 1.1, 1.1);
+}
+
+.skin-block.front.outside.outside-back {
+    transform: rotateX(35deg) rotateY(45deg) rotateZ(0deg) scale3d(1.1, 1.1, 1.1);
+}
+
+.skin-block.back.outside.outside-back {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg) scale3d(1.1, 1.1, 1.1);
+}
+
+.skin-block>div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+	top: 0;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: 800%;
+}
+
+/* .skin-block .top,
+.skin-block .bottom {
+    background-color: #AAFFAA;
+}
+
+.skin-block .left,
+.skin-block .right {
+    background-color: #FFAAAA;
+}
+
+.skin-block .front,
+.skin-block .back {
+    background-color: #AAAAFF;
+} */
+
+.skin-block .top {
+    transform: rotateX(90deg) translateZ(50px);
+    background-image: var(--skin);
+    background-position: -100px 0;
+}
+
+.skin-block.outside .top {
+    background-position: -500px 0;
+}
+
+.skin-block .front {
+    transform: translateZ(50px);
+    background-image: var(--skin);
+    background-position: -100px -100px;
+}
+
+.skin-block.outside .front {
+    background-position: -500px -100px;
+}
+
+.skin-block.outside.outside-back .front {
+    transform: rotateY(90deg) translateZ(-50px);
+}
+
+.skin-block .left {
+    transform: rotateY(-90deg) translateZ(50px);
+    background-image: var(--skin);
+    background-position: 0px -100px;
+}
+
+.skin-block.outside .left {
+    background-position: -400px -100px;
+}
+
+.skin-block.outside.outside-back .left {
+    transform: rotateY(180deg) translateZ(-50px);
+}
+
+.skin-block .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+    background-image: var(--skin);
+    background-position: -200px 0;
+}
+
+.skin-block.outside .bottom {
+    background-position: -600px -0;
+}
+
+.skin-block .back {
+    transform: translateZ(50px);
+    background-image: var(--skin);
+    background-position: -300px -100px;
+}
+
+.skin-block.outside .back {
+    background-position: -700px -100px;
+}
+
+.skin-block.outside.outside-back .back {
+    transform: rotateY(90deg) translateZ(-50px);
+}
+
+.skin-block .right {
+    transform: rotateY(-90deg) translateZ(50px);
+    background-image: var(--skin);
+    background-position: -200px -100px;
+}
+
+.skin-block.outside .right {
+    background-position: -600px -100px;
+}
+
+.skin-block.outside.outside-back .right {
+    transform: rotateY(180deg) translateZ(-50px);
+}
+
+.skin-info {
+    box-sizing: border-box;
+    padding: 16px;
+    height: 60px;
+    background-color: #EEE;
+}
+
+.skin-title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.skin-list-item {
+    box-sizing: border-box;
+    width: 120px;
+    height: 180px;
+    box-shadow: 0px 1px 5px #AAA;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.skin-list-item .img {
+    width: 120px;
+    height: 120px;
+    background-color: #EEE;
+    position: relative;
+}
+
+.skin-list-item .img .p1,
+.skin-list-item .img .p2 {
+    width: 120px;
+    height: 120px;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: 800%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skin-list-item .img .p1 {
+    background-position: -120px -120px;
+}
+
+.skin-list-item .img .p2 {
+    background-position: -600px -120px;
+}
+
+.skin-list-item .name {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+}
