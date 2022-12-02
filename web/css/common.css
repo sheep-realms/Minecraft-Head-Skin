@@ -3,6 +3,23 @@
     padding: 0;
 }
 
+h2 {
+    font-size: 24px;
+    border-bottom: #444 1px solid;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 28px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: #000 1px solid;
+}
+
 #app {
     display: flex;
     align-items: stretch;
@@ -16,7 +33,6 @@
 
 #app>.side {
     width: 400px;
-    cursor: pointer;
 }
 
 #app>.content {
@@ -24,7 +40,64 @@
     overflow-x: hidden;
     overflow-y: scroll;
     box-sizing: border-box;
-    padding: 16px;
+    padding: 32px 16px 16px 16px;
+    position: relative;
+}
+
+#index-bar {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: calc(100vw - 400px);
+    margin-left: -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    background-color: #000;
+    color: #FFF;
+    transition: opacity .3s;
+    z-index: 10;
+}
+
+#index-bar:hover {
+    opacity: 0.35;
+}
+
+#index {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: calc(100vw - 400px);
+    margin-left: -16px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 32px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s;
+    color: #FFF;
+    font-size: 20px;
+}
+
+#index.show {
+    pointer-events: unset;
+    opacity: 1;
+}
+
+#index-close {
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+#index a {
+    color: #FFF;
+    border-bottom: unset;
+    font-weight: 300;
 }
 
 #skin-show {
@@ -35,6 +108,26 @@
     justify-content: center;
     background-color: #EEE;
     flex-direction: column;
+    position: relative;
+}
+
+#skin-show[data-url] {
+    cursor: pointer;
+}
+
+#skin-show::before {
+    content: "⭳ 下载 / DOWNLOAD ⭳";
+    position: absolute;
+    top: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+#skin-show[data-url]:hover::before {
+    opacity: 0.35;
 }
 
 .skin-block {
@@ -186,6 +279,10 @@
     text-align: center;
 }
 
+#skin-list {
+    padding: 16px;
+}
+
 .skin-list-item {
     box-sizing: border-box;
     width: 120px;
@@ -196,6 +293,11 @@
     align-items: center;
     margin: 16px;
     cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.skin-list-item:hover {
+    box-shadow: 0px 3px 10px #AAA;
 }
 
 .skin-list-item .img {
@@ -235,4 +337,9 @@
     justify-content: center;
     text-align: center;
     font-size: 12px;
+}
+
+.footer {
+    padding: 16px;
+    box-sizing: border-box;
 }

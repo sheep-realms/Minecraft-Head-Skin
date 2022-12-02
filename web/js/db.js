@@ -1,5 +1,9 @@
 let skinList = [
     {
+        "type": "h2",
+        "title": "功能性方块 / Function Block",
+        "id": "t-function-block"
+    }, {
         "name": "Barrel",
         "url": "block/function/barrel.png"
     }, {
@@ -11,6 +15,10 @@ let skinList = [
     }, {
         "name": "Barrel Open 1",
         "url": "block/function/barrel_open_1.png"
+    }, {
+        "type": "h2",
+        "title": "自然方块 / Natural Block",
+        "id": "t-natural-block"
     }, {
         "name": "Bee Nest",
         "url": "block/natural/bee_nest.png"
