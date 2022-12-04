@@ -75,6 +75,22 @@ let skinList = [
         "url": "block/natural/stripped_oak_log.png"
     }, {
         "type": "h2",
+        "title": "图标 / Icon",
+        "id": "t-icon"
+    }, {
+        "name": "Bilibili",
+        "url": "icon/bili.png"
+    }, {
+        "name": "Niconico",
+        "url": "icon/nico.png"
+    }, {
+        "name": "Pixiv",
+        "url": "icon/pixiv.png"
+    }, {
+        "name": "YouTube",
+        "url": "icon/youtube.png"
+    }, {
+        "type": "h2",
         "title": "标志符号 / Sign",
         "id": "t-sign"
     }, {
