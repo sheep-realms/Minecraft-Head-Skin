@@ -81,6 +81,15 @@ let skinList = [
         "name": "Bilibili",
         "url": "icon/bili.png"
     }, {
+        "name": "Discord",
+        "url": "icon/discord.png"
+    }, {
+        "name": "KOOK",
+        "url": "icon/kook.png"
+    }, {
+        "name": "Microsoft",
+        "url": "icon/microsoft.png"
+    }, {
         "name": "Niconico",
         "url": "icon/nico.png"
     }, {
