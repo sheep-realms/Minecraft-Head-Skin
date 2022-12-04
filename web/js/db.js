@@ -70,5 +70,78 @@ let skinList = [
     }, {
         "name": "Moss Stone",
         "url": "block/natural/moss_stone.png"
+    }, {
+        "name": "Stripped Oak Log",
+        "url": "block/natural/stripped_oak_log.png"
+    }, {
+        "type": "h2",
+        "title": "标志符号 / Sign",
+        "id": "t-sign"
+    }, {
+        "name": "Anvil",
+        "url": "sign/anvil.png"
+    }, {
+        "name": "Arrow Down",
+        "url": "sign/arrow_down.png"
+    }, {
+        "name": "Arrow Left",
+        "url": "sign/arrow_left.png"
+    }, {
+        "name": "Arrow Right",
+        "url": "sign/arrow_right.png"
+    }, {
+        "name": "Arrow up",
+        "url": "sign/arrow_up.png"
+    }, {
+        "name": "Creeper",
+        "url": "sign/creeper.png"
+    }, {
+        "name": "Disable",
+        "url": "sign/disable.png"
+    }, {
+        "name": "Fishing",
+        "url": "sign/fishing.png"
+    }, {
+        "name": "Key",
+        "url": "sign/key.png"
+    }, {
+        "name": "Locked",
+        "url": "sign/locked.png"
+    }, {
+        "name": "Logic No",
+        "url": "sign/logic_no.png"
+    }, {
+        "name": "Logic OK",
+        "url": "sign/logic_ok.png"
+    }, {
+        "name": "Mark Centigrade",
+        "url": "sign/mark_centigrade.png"
+    }, {
+        "name": "Mark Exclamatory",
+        "url": "sign/mark_exclamatory.png"
+    }, {
+        "name": "Mark Fahrenheit",
+        "url": "sign/mark_fahrenheit.png"
+    }, {
+        "name": "Mark Question",
+        "url": "sign/mark_question.png"
+    }, {
+        "name": "Mark Quote Double Before",
+        "url": "sign/mark_quote_double_before.png"
+    }, {
+        "name": "Mark Quote Double After",
+        "url": "sign/mark_quote_double_after.png"
+    }, {
+        "name": "Mark Quote Single Before",
+        "url": "sign/mark_quote_single_before.png"
+    }, {
+        "name": "Mark Quote Single After",
+        "url": "sign/mark_quote_single_after.png"
+    }, {
+        "name": "Square",
+        "url": "sign/square.png"
+    }, {
+        "name": "Unlock",
+        "url": "sign/unlock.png"
     }
 ];
